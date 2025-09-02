@@ -1,0 +1,25 @@
+meta {
+  name: Create environment
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/api/v1/environments
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "my-environment",
+      "datasources": [
+        { "data_source": "primary_db", "connection": "my-postgres" },
+        { "data_source": "warehouse", "connection": "my-bigquery" }
+      ]
+    }
+}
+
+settings {
+  encodeUrl: true
+}

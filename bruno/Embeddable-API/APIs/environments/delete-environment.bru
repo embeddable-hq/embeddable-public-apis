@@ -1,0 +1,19 @@
+meta {
+  name: Delete environment
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/api/v1/environments/{{environmentName}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  environmentName: my-environment
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Update environment
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{host}}/api/v1/environments/{{environmentName}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "datasources": [
+        { "data_source": "primary_db", "connection": "prod-postgres" },
+        { "data_source": "warehouse", "connection": "prod-bigquery" }
+      ]
+    }
+}
+
+vars:pre-request {
+  environmentName: my-environment
+}
+
+settings {
+  encodeUrl: true
+}
