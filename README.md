@@ -1,6 +1,6 @@
 # Embeddable Public APIs
 
-Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs.
+Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (listed [here](https://github.com/embeddable-hq/embeddable-public-apis/tree/main/bruno/Embeddable-API/APIs)).
 
 ## Getting started
 
