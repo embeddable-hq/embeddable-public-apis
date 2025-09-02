@@ -10,13 +10,11 @@ post {
   auth: inherit
 }
 
-headers {
-  Content-Type: application/json
-  Accept: application/json
-}
-
 body:json {
   {
+      /* 
+       * learn more [here](https://docs.embeddable.com/deployment/tokens-api) 
+       */
       "embeddableId": "<embeddable-id>",
       "savedVersion": "production", 
       "expiryInSeconds": 6048000,

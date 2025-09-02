@@ -32,6 +32,8 @@ Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (li
 
  ![list connections](public/img/list-connections.png)
 
+ - For other requests you may need to update the `Body` or `Vars` for them to run correctly.
+
  ## Troubleshooting
 
   - Error: `getaddrinfo ENOTFOUND {{host}}`
