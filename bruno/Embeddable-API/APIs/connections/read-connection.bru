@@ -1,0 +1,19 @@
+meta {
+  name: Read connection
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/v1/connections/{{connectionName}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  connectionName: my-connection
+}
+
+settings {
+  encodeUrl: true
+}

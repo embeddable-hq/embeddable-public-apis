@@ -1,0 +1,15 @@
+meta {
+  name: List environments
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/v1/connections
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

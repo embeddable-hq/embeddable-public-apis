@@ -1,0 +1,27 @@
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{api-key}}
+}
+
+docs {
+  # Embeddable's API
+  
+  This collection represents Embeddable's customer-facing APIs.
+  
+  ## Getting started
+  
+   - In the top-right corner, click environment -> Configure
+   - Choose the appropriate region
+   - Enter your API key
+   
+  ## Running requests
+  
+   - Choose your API from the left hand menu
+   - Check if there are any **Vars** that need updating
+   - Click the Run arrow (->) to run the request.
+   
+  Important: POST, PUT and DELETE requests will make permanent changes to your Embeddable Workspace.
+}

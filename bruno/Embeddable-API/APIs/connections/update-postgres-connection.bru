@@ -1,0 +1,33 @@
+meta {
+  name: Update postgres connection
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{host}}/api/v1/connections/{{connectionName}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "postgres", // Database type
+    "credentials": {
+        "host": "localhost",
+        "database": "db",
+        "user": "user",
+        "password": "pass",
+        "port": 5432, // optional, number
+        "ssl": true // optional, boolean
+    }
+  }
+}
+
+vars:pre-request {
+  connectionName: my-connection
+}
+
+settings {
+  encodeUrl: true
+}

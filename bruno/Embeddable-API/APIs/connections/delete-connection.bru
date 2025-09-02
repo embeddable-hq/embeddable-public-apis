@@ -1,0 +1,19 @@
+meta {
+  name: Delete connection
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{host}}/api/v1/connections/{{connectionName}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  connectionName: my-connection
+}
+
+settings {
+  encodeUrl: true
+}
