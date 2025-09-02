@@ -1,0 +1,33 @@
+meta {
+  name: Request token
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{host}}/api/v1/security-token
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+      "embeddableId": "<embeddable-id>",
+      "savedVersion": "production", 
+      "expiryInSeconds": 6048000,
+      "securityContext": { 
+        "key": "value"
+      },
+      "user": "<email-or-id>",
+      "environment": "default"
+    }
+}
+
+settings {
+  encodeUrl: true
+}
