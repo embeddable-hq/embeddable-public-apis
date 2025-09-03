@@ -1,0 +1,31 @@
+meta {
+  name: Create bigquery connection
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{host}}/api/v1/connections
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "my-connection",
+    "type": "bigquery", // Database type
+    "credentials": {
+        "projectId": "...",
+        "credentials": {
+          "type": "service_account",
+          "project_id": "...",
+          "private_key_id": "...",
+          "private_key": "..." //, ...
+        }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}
