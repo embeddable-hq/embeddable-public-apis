@@ -12,14 +12,16 @@ put {
 
 body:json {
   {
+    /* 
+     * learn more [here](https://docs.embeddable.com/data/connect-your-database) 
+     */
     "type": "bigquery", // Database type
     "credentials": {
         "projectId": "...",
-        "credentials": {
+        "credentials": { // content of service-account.json
           "type": "service_account",
-          "project_id": "...",
-          "private_key_id": "...",
-          "private_key": "..." //, ...
+          "project_id": 'my-project-id',
+          // etc.
         }
     }
   }
