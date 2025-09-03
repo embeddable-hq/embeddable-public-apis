@@ -2,6 +2,12 @@
 
 Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (listed [here](https://github.com/embeddable-hq/embeddable-public-apis/tree/main/bruno/Embeddable-API/APIs)).
 
+<a target='_blank' href='https://fetch.usebruno.com/?url=https%3A%2F%2Fgithub.com%2Fembeddable-hq%2Fembeddable-public-apis'>
+  <img src="https://fetch.usebruno.com/button.svg" alt="Fetch in Bruno" style="max-width: 100%;height: auto;max-height: 40px;margin-bottom: 10px;" width="160" height="40"></img>
+</a>
+
+[Bruno](https://www.usebruno.com/) is a fully offline, git-native, open-source API Client (like Postman, [but better](https://www.usebruno.com/compare/bruno-vs-postman)).
+
 ## Getting started
 
  - Clone (or download) this repo locally
