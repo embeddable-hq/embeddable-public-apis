@@ -1,0 +1,43 @@
+meta {
+  name: Set refresh contexts
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/caching/refresh-contexts
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "refreshInterval": "3 hours",
+      "embeddables": [
+        {
+          "embeddableId": "<embeddable-id>",
+          "savedVersions": ["production"]  
+        }
+      ],
+      "scheduledRefreshContexts": [
+        {
+          "securityContext": {
+            "key": "value"
+          },
+          "environment": "default",
+          "timezones": ["UTC"]
+        },
+        {
+          "securityContext": {
+            "key": "value"
+          },
+          "environment": "prod"
+        }
+      ],
+      "roles": ["default"]
+    }
+}
+
+settings {
+  encodeUrl: true
+}
