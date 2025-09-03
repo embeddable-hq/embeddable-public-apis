@@ -1,0 +1,19 @@
+meta {
+  name: Test connection
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/api/v1/connections/{{connectionName}}/test
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  connectionName: my-connection
+}
+
+settings {
+  encodeUrl: true
+}
