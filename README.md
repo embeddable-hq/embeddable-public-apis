@@ -6,6 +6,8 @@ Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (li
   <img src="https://fetch.usebruno.com/button.svg" alt="Fetch in Bruno" style={{ width: '160px', height: '40px', marginTop: '1.5rem' }} width="160" height="40"></img>
 </a>
 
+[Bruno](https://www.usebruno.com/) is a fully offline, open-source API Client (like Postman, [but better](https://www.usebruno.com/compare/bruno-vs-postman)).
+
 ## Getting started
 
  - Clone (or download) this repo locally
