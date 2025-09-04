@@ -15,7 +15,7 @@ Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (li
  - Install Bruno ([here](https://docs.usebruno.com/get-started/bruno-basics/download))
  	- e.g. `brew install bruno`
  - Open Bruno (e.g. on Mac Bruno appears in the Applications folder)
- - Click 'Open collection' and choose the `bruno/Embeddable-API` collection in your downloaded repo.
+ - Click 'Open collection' and choose the `bruno/Embeddable-API` folder in your downloaded repo.
 
  ![open collection](public/img/open-collection.png)
 
