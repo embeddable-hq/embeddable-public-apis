@@ -1,0 +1,30 @@
+meta {
+  name: Create data provider
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/api/v1/data-providers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "{{providerName}}",
+    "type": "cube",
+    "credentials": {
+      "secretKey": "my-encrypted-secret",
+      "instanceUrl": "https://cube-instance-url"
+    }
+  }
+}
+
+vars:pre-request {
+  providerName: staging
+}
+
+settings {
+  encodeUrl: true
+}

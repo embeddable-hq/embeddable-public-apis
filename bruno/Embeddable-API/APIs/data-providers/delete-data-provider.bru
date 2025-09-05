@@ -1,0 +1,19 @@
+meta {
+  name: Delete data provider
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{host}}/api/v1/data-providers/{{providerName}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  providerName: staging
+}
+
+settings {
+  encodeUrl: true
+}

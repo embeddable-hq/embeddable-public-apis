@@ -1,0 +1,29 @@
+meta {
+  name: Update data provider
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{host}}/api/v1/data-providers/{{providerName}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "cube",
+    "credentials": {
+      "secretKey": "updated-encrypted-secret",
+      "instanceUrl": "https://updated-cube-instance-url"
+    }
+  }
+}
+
+vars:pre-request {
+  providerName: staging
+}
+
+settings {
+  encodeUrl: true
+}
