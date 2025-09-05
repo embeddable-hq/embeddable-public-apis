@@ -5,27 +5,23 @@ meta {
 }
 
 put {
-  url: {{host}}/api/v1/data-providers/{name}
+  url: {{host}}/api/v1/data-providers/{{providerName}}
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    /*
-     * Updates an existing data provider.
-     * Notes:
-     *  - type must be "cube" (translates to CUBE_CLOUD)
-     *  - Updates external system credential under the given name
-     *  - Returns 200 on success
-     *  - Response format matches GET /api/v1/data-providers/{name}
-     */
     "type": "cube",
     "credentials": {
       "secretKey": "updated-encrypted-secret",
       "instanceUrl": "https://updated-cube-instance-url"
     }
   }
+}
+
+vars:pre-request {
+  providerName: staging
 }
 
 settings {

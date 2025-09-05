@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{host}}/api/v1/data-providers/{name}
+  url: {{host}}/api/v1/data-providers/{{providerName}}
   body: none
   auth: inherit
+}
+
+vars:pre-request {
+  providerName: staging
 }
 
 settings {
