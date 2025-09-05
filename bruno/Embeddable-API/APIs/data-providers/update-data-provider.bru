@@ -1,0 +1,43 @@
+meta {
+  name: Update data provider
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{host}}/api/v1/data-providers/{{providerName}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    /*
+     * Updates an existing data provider.
+     * Notes:
+     *  - type must be "cube" (translates to CUBE_CLOUD)
+     *  - Updates external system credential under the given name
+     *  - Returns 200 on success
+     *  - Response format matches GET /api/v1/data-providers/{name}
+     */
+    "type": "cube",
+    "credentials": {
+      "secretKey": "updated-encrypted-secret",
+      "instanceUrl": "https://updated-cube-instance-url"
+    }
+  }
+}
+
+vars:pre-request {
+  /*
+   * Use api.eu.embeddable.com for EU region
+   * Use api.us.embeddable.com if your region is US
+  */
+  
+  host: https://api.eu.embeddable.com
+  providerName: my-provider
+}
+
+settings {
+  encodeUrl: true
+}

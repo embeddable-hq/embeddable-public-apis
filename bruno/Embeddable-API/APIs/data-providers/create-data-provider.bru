@@ -1,0 +1,44 @@
+meta {
+  name: Create data provider
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{host}}/api/v1/data-providers
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    /*
+     * Creates a new data provider.
+     * Notes:
+     *  - type must be "cube" (translates to CUBE_CLOUD)
+     *  - name cannot be "internal" (reserved)
+     *  - secretKey must be encrypted in the database
+     *  - Returns 201 on success, 400 on error
+     *  - Response format matches GET /api/v1/data-providers/{name}
+     */
+    "name": "my-provider",
+    "type": "cube",
+    "credentials": {
+      "secretKey": "my-encrypted-secret",
+      "instanceUrl": "https://cube-instance-url"
+    }
+  }
+}
+
+vars:pre-request {
+  /*
+   * Use api.eu.embeddable.com for EU region
+   * Use api.us.embeddable.com if your region is US
+  */
+  
+  host: https://api.eu.embeddable.com
+}
+
+settings {
+  encodeUrl: true
+}

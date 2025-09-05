@@ -1,0 +1,24 @@
+meta {
+  name: Delete data provider
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{host}}/api/v1/data-providers/{{providerName}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  /*
+   * Use api.eu.embeddable.com for EU region
+   * Use api.us.embeddable.com if your region is US
+   */
+  host: https://api.eu.embeddable.com
+  providerName: my-provider
+}
+
+settings {
+  encodeUrl: true
+}

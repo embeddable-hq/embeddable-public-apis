@@ -1,0 +1,23 @@
+meta {
+  name: List data providers
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/v1/data-providers
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  /*
+   * Use api.eu.embeddable.com for EU region
+   * Use api.us.embeddable.com if your region is US
+   */
+  host: https://api.eu.embeddable.com
+}
+
+settings {
+  encodeUrl: true
+}
