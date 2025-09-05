@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: {{host}}/api/v1/data-providers/{{providerName}}
+  url: {{host}}/api/v1/data-providers/{name}
   body: json
   auth: inherit
 }
@@ -26,16 +26,6 @@ body:json {
       "instanceUrl": "https://updated-cube-instance-url"
     }
   }
-}
-
-vars:pre-request {
-  /*
-   * Use api.eu.embeddable.com for EU region
-   * Use api.us.embeddable.com if your region is US
-  */
-  
-  host: https://api.eu.embeddable.com
-  providerName: my-provider
 }
 
 settings {
