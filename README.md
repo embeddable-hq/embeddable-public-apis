@@ -32,7 +32,7 @@ Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (li
  ![configure environment](public/img/configure-environment.png)
 
 ## Your first request
- - Navigate to Connections -> List connections.
+ - Navigate to Embeddables -> List embeddables.
  - Click the right arrow (->) on the right side of the screen to execute the request.
  - You should see the response appear in the right panel.
 
