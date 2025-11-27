@@ -1,0 +1,17 @@
+meta {
+  name: postgres
+  seq: 5
+}
+
+auth {
+  mode: inherit
+}
+
+vars:pre-request {
+  host: host
+  database: db
+  user: usr
+  password: {{postgres-password}}
+  port: 5432
+  ssl: true
+}

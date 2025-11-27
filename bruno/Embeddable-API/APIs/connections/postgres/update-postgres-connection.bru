@@ -1,7 +1,7 @@
 meta {
   name: Update postgres connection
   type: http
-  seq: 6
+  seq: 2
 }
 
 put {
@@ -17,20 +17,17 @@ body:json {
      */
     "type": "postgres", // Database type
     "credentials": {
-        "host": "host",
-        "database": "db",
-        "user": "user",
-        "password": "pass",
-        "port": 5432, // optional, number
-        "ssl": true // optional, boolean
+        "host": "{{host}}",
+        "database": "{{database}}",
+        "user": "{{user}}",
+        "password": "{{password}}",
+        "port": {{port}}, // optional, number
+        "ssl": {{ssl}} // optional, boolean
     }
   }
 }
 
-vars:pre-request {
-  connectionName: my-connection
-}
-
 settings {
   encodeUrl: true
+  timeout: 0
 }

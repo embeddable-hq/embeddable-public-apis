@@ -2,6 +2,12 @@ meta {
   name: data-providers
 }
 
+vars:pre-request {
+  providerName: staging
+  secretKey: {{data-provider-secret-key}}
+  instanceUrl: https://cube-instance-url
+}
+
 docs {
   # data-providers API
   
