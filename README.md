@@ -10,37 +10,63 @@ Get started with [Embeddable](https://embeddable.com)'s customer-facing APIs (li
 
 ## Getting started
 
- - Clone (or download) this repo locally
- 	- e.g. `git clone https://github.com/embeddable-hq/embeddable-public-apis.git`
- - Install Bruno ([here](https://docs.usebruno.com/get-started/bruno-basics/download))
- 	- e.g. `brew install bruno`
- - Open Bruno (e.g. on Mac Bruno appears in the Applications folder)
- - Click 'Open collection' and choose the `bruno/Embeddable-API` folder in your downloaded repo.
+- Clone (or download) this repo locally
+  - e.g. `git clone https://github.com/embeddable-hq/embeddable-public-apis.git`
+- Install Bruno ([here](https://docs.usebruno.com/get-started/bruno-basics/download))
+  - e.g. `brew install bruno`
+- Open Bruno (e.g. on Mac Bruno appears in the Applications folder)
+- Click 'Open collection' and choose the `bruno/Embeddable-API` folder in your downloaded repo.
 
- ![open collection](public/img/open-collection.png)
+![open collection](public/img/open-collection.png)
 
- - Select "Embeddable-API" from the left-hand menu.
- - Choose "Safe mode" when prompted.
+- Select "Embeddable-API" from the left-hand menu.
+- Choose "Safe mode" when prompted.
 
 ## Configuring Bruno
 
- - In the top-right corner of Bruno, choose 'No environment'->'embeddable.com'.
- - Now, in the same menu, click 'Configure'.
- - Enter your workspace `region` ([eu or us](https://docs.embeddable.com/deployment/deployment-regions)) and enter your Embeddable `api-key` (from [here](https://docs.embeddable.com/getting-started/set-up-your-workspace)).
- - Click Save.
+- In the top-right corner of Bruno, choose 'No environment'->'embeddable.com'.
+- Now, in the same menu, click 'Configure'.
+- Enter your workspace `region` ([eu or us](https://docs.embeddable.com/deployment/deployment-regions)) and enter your Embeddable `api-key` (from [here](https://docs.embeddable.com/getting-started/set-up-your-workspace)).
+- Click Save.
 
- ![configure environment](public/img/configure-environment.png)
+![configure environment](public/img/configure-environment.png)
 
 ## Your first request
- - Navigate to Embeddables -> List embeddables.
- - Click the right arrow (->) on the right side of the screen to execute the request.
- - You should see the response appear in the right panel.
 
- ![list connections](public/img/list-connections.png)
+- Navigate to Embeddables -> List embeddables.
+- Click the right arrow (->) on the right side of the screen to execute the request.
+- You should see the response appear in the right panel.
 
- - For other requests you may need to update the `Body` or `Vars` for them to run correctly.
+![list connections](public/img/list-connections.png)
 
- ## Troubleshooting
+- For other requests you may need to update the `Body` or `Vars` for them to run correctly.
 
-  - Error: `getaddrinfo ENOTFOUND {{host}}`
-  	- Solution: make sure you've picked `embeddable.com` as your environment (top right corner)
+## Secrets
+
+Secret variables such as passwords and tokens are stored in the 'embeddable.com' environment.
+
+- Click the environment dropdown in the top-right corner of Bruno
+- Make sure 'embeddable.com' is selected
+- Click 'Configure'
+- After you've set your secret variable, make sure to save your changes
+
+## Troubleshooting
+
+- Error: `getaddrinfo ENOTFOUND {{host}}`
+  - Solution: make sure you've picked `embeddable.com` as your environment (top right corner)
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://docs.embeddable.com/img/logos/colour-horizontal-white-transparent.png, https://docs.embeddable.com/img/logos/colour-horizontal-white-transparent@2x.png 2x">
+  <source media="(prefers-color-scheme: light)" srcset="https://docs.embeddable.com/img/logos/colour-horizontal-black-transparent.png, https://docs.embeddable.com/img/logos/colour-horizontal-black-transparent@2x.png 2x">
+  <img alt="Embeddable" src="https://docs.embeddable.com/img/logos/colour-horizontal-black@2x.png" width="216">
+</picture>
+
+[Embeddable](https://embeddable.com/) is a developer toolkit for building fast,
+interactive, customer-facing analytics directly into your product.
+Fully customize analytics dashboards using React.js, and seamlessly
+integrate them anywhere with Web Components.
+
+Discover more about Embeddable by reading our [Docs](https://docs.embeddable.com/),
+[Customer Stories](https://embeddable.com/customer-stories), and [Blog](https://embeddable.com/blog).
