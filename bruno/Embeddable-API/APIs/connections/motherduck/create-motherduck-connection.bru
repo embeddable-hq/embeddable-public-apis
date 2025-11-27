@@ -1,0 +1,27 @@
+meta {
+  name: Create Motherduck Connection
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/connections
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "{{connectionName}}",
+    "type": "duckdb",
+    "credentials": {
+      "motherDuckToekn": "{{motherDuckToken}}"
+    }
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
