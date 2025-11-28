@@ -1,11 +1,11 @@
 meta {
-  name: Create bigquery connection
+  name: Update bigquery connection
   type: http
-  seq: 7
+  seq: 2
 }
 
-post {
-  url: {{host}}/api/v1/connections
+put {
+  url: {{host}}/api/v1/connections/{{connectionName}}
   body: json
   auth: inherit
 }
@@ -15,13 +15,12 @@ body:json {
     /* 
      * learn more [here](https://docs.embeddable.com/data/connect-your-database) 
      */
-    "name": "my-connection",
     "type": "bigquery", // Database type
     "credentials": {
-        "projectId": "...",
+        "projectId": "{{projectId}}",
         "credentials": { // content of service-account.json
           "type": "service_account",
-          "project_id": 'my-project-id',
+          "project_id": "{{projectId}}"
           // etc.
         }
     }
@@ -30,4 +29,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

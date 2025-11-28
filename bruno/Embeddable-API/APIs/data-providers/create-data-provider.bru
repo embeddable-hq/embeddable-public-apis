@@ -18,16 +18,14 @@ body:json {
     "name": "{{providerName}}",
     "type": "cube",
     "credentials": {
-      "secretKey": "my-encrypted-secret",
-      "instanceUrl": "https://cube-instance-url"
+      "secretKey": "{{secretKey}}",
+      "instanceUrl": "{{instanceUrl}}"
     }
   }
-}
-
-vars:pre-request {
-  providerName: staging
+  
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

@@ -12,20 +12,30 @@ post {
 
 body:json {
   {
-      /* 
-       * learn more [here](https://docs.embeddable.com/deployment/tokens-api) 
-       */
-      "embeddableId": "<embeddable-id>",
-      "savedVersion": "production", 
-      "expiryInSeconds": 6048000,
-      "securityContext": { 
-        "key": "value"
-      },
-      "user": "<email-or-id>",
-      "environment": "default"
-    }
+    /* 
+     * learn more [here](https://docs.embeddable.com/deployment/tokens-api) 
+     */
+    "embeddableId": "{{embeddableId}}",
+    "savedVersion": "{{savedVersion}}", 
+    "expiryInSeconds": {{expiryInSeconds}},
+    "securityContext": {
+      "key": "value"
+    },
+    "user": "{{userKey}}",
+    "environment": "{{environment}}"
+  }
+  
+}
+
+vars:pre-request {
+  embeddableId: embeddable-id
+  savedVersion: production
+  expiryInSeconds: 6048000
+  userKey: email or id
+  environment: default
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

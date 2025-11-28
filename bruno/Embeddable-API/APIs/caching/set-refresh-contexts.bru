@@ -12,35 +12,41 @@ post {
 
 body:json {
   {
-      /* 
-       * learn more [here](https://docs.embeddable.com/data-modeling/caching/caching-api) 
-       */
-      "refreshInterval": "3 hours",
-      "embeddables": [
-        {
-          "embeddableId": "<embeddable-id>",
-          "savedVersions": ["production"]  
-        }
-      ],
-      "scheduledRefreshContexts": [
-        {
-          "securityContext": {
-            "key": "value"
-          },
-          "environment": "default",
-          "timezones": ["UTC"]
+    /* 
+     * learn more [here](https://docs.embeddable.com/data-modeling/caching/caching-api) 
+     */
+    "refreshInterval": "3 hours",
+    "embeddables": [
+      {
+        "embeddableId": "{{embeddableId}}",
+        "savedVersions": ["production"]  
+      }
+    ],
+    "scheduledRefreshContexts": [
+      {
+        "securityContext": {
+          "key": "value"
         },
-        {
-          "securityContext": {
-            "key": "value"
-          },
-          "environment": "prod"
-        }
-      ],
-      "roles": ["default"]
-    }
+        "environment": "default",
+        "timezones": ["UTC"]
+      },
+      {
+        "securityContext": {
+          "key": "value"
+        },
+        "environment": "prod"
+      }
+    ],
+    "roles": ["default"]
+  }
+  
+}
+
+vars:pre-request {
+  embeddableId: <embeddable-id>
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
