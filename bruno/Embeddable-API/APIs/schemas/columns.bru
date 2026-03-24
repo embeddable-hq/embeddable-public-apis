@@ -1,0 +1,37 @@
+meta {
+  name: columns
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/api/v1/connections/{{connectionName}}/columns
+  body: json
+  auth: inherit
+}
+
+body:json {
+  [
+    {
+      "schemaName": "spotify",
+      "tableName": "daily_listens"
+    },
+    {
+      "schemaName": "spotify",
+      "tableName": "artists"
+    },
+    {
+      "schemaName": "spotify",
+      "tableName": "tracks"
+    }
+  ]
+}
+
+vars:pre-request {
+  connectionName: default
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
