@@ -1,0 +1,20 @@
+meta {
+  name: schemas
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/connections/{{connectionName}}/schemas
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  connectionName: default
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
